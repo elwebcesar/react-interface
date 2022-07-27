@@ -1,0 +1,120 @@
+@import './../../styles/_colors', './../../styles/_resolutions';
+
+$max-height-header: 470px;
+$max-height-header2: 340px;
+$max-height-header3: 300px;
+
+.header {
+  width: 100%;
+  height: $max-height-header;
+  overflow: hidden;
+  color: $white;
+  background-image: url(/assests/images/plane.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+	box-sizing: border-box;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-height: $max-height-header;
+    background-image: url(/assests/images/plane.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  &__lenguage {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 1rem;
+  }
+
+  &__info {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    padding-top: 24px;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: $max-height-header;
+    box-sizing: border-box;
+
+    & .container-center {
+      position: relative;
+      display: flex;
+      flex-flow: column;
+    }
+
+    &__logo {
+      margin: 0;
+    }
+
+    &__promo {
+      display: flex;
+      flex: 1 100%;
+      align-items: center;
+
+      & div {
+        width: 100%;
+        max-width: 470px;
+
+        & a {
+          display: inline-block;
+          margin-top: 30px;
+          padding: 10px 50px;
+          color: $white;
+          text-decoration: none;
+          background-color: $red;
+          border-radius: 40px;
+        }
+      }
+    }
+  }
+}
+
+
+/* ------------------------------------------------------------------------
+Responsive
+------------------------------------------------------------------------- */
+
+@media screen and (max-width: $resolution-x) {
+	.header {
+    height: $max-height-header2;
+
+    &::after,  &__info {
+      max-height: $max-height-header2;
+    }
+
+    &__info {
+      padding-top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: $resolution-l) {
+	.header {
+    height: $max-height-header3;
+    
+    &::after,  &__info {
+      max-height: $max-height-header3;
+    }
+  }
+}
+
+@media screen and (max-width: $resolution-m) {
+	.header__info__promo div a {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: $resolution-xs) {
+	.header__info__promo div a {
+    margin-top: 4px;
+  }
+}

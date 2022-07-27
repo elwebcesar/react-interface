@@ -1,0 +1,81 @@
+@import './../../styles/_colors', './../../styles/_resolutions';
+
+.dropbtn {
+  padding: 0;
+  width: 126px;
+  color: $white;
+  text-align: right;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  & img {
+    height: 8px;
+    transition: all .3s;
+
+    &.active {
+      transform: rotate(180deg);
+    }
+  }
+
+  // &:hover, &:focus {
+  // }
+
+  & .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  margin-top: 6px;
+  padding: 8px 0;
+  min-width: 146px;
+  // overflow: auto;
+  background-color: $white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 16px;
+
+  &:before {
+    position: absolute;
+    z-index: 1001;
+    content: "";
+    top: -12px;
+    bottom: auto;
+    right: 20px;
+
+    border: 6px solid transparent;
+
+    border-top-color: transparent;
+    border-bottom-color: $white;
+  }
+
+  & a {
+    color: $blue_sure;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    transition: color .3s ease-in-out;
+
+    &:hover {
+      color: $blue_dark;
+    }
+  }
+
+  &.show {
+    display: block;
+  }
+}
+
+/* ------------------------------------------------------------------------
+Responsive
+------------------------------------------------------------------------- */
+@media screen and (max-width: $max-width-resolution) {
+	.dropbtn {
+		width: 136px;
+	}
+}

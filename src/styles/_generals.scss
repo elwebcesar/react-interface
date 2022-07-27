@@ -1,0 +1,82 @@
+
+/* ------------------------------------------------------------------------
+Titles
+------------------------------------------------------------------------- */
+// @for $i from 1 to 4 {
+// 	h#{$i} { font-size: 4rem - $i; }
+// }
+
+// $hSize: 2.8rem;
+// @each $h in h1,h2,h3,h4,h5,h6 {
+//   #{$h} { 
+//     font-size: $hSize;
+//   }
+//   $hSize: $hSize - .5;
+// }
+
+h1 {
+	font-size: 2.1rem;
+}
+
+h2 {
+	font-size: 1.8rem;
+}
+
+h3 {
+	font-size: 1.4rem;
+}
+
+h4 {
+	font-size: 1rem;
+}
+
+
+
+/* ------------------------------------------------------------------------
+Generals
+------------------------------------------------------------------------- */
+
+// .row {
+//     display: flex;
+//     flex-wrap: wrap;
+// }
+
+.container-center {
+	margin: 0 auto;
+    padding: 0 1rem;
+	width: 100%;
+	max-width: $max-width-resolution;
+	box-sizing: border-box;
+    // border: 1px solid red;
+}
+
+
+/* ------------------------------------------------------------------------
+Flex
+------------------------------------------------------------------------- */
+
+.flex {
+	display: flex;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+.flow-column {
+	flex-flow: column;
+}
+
+.content-center {
+	justify-content: center;
+}
+
+
+/* ------------------------------------------------------------------------
+Responsive
+------------------------------------------------------------------------- */
+// @media screen and (max-width: $max-width-resolution) {
+// 	.container-center {
+// 		overflow: hidden;
+// 	}
+// }

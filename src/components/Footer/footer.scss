@@ -1,0 +1,94 @@
+@import './../../styles/_colors', './../../styles/_resolutions';
+
+.footer {
+    margin-top: 70px;
+    padding: 36px 0 100px 0;
+    color: $white;
+    background-color: $blue_dark;
+
+    a {
+        transition: all .3s;
+    }
+
+    &__follow {
+
+        h2 {
+            margin-top: 0;
+        }
+
+        & a {
+            padding: 0 .5rem;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+
+    &__links {
+
+        h4 {
+            color: $red;
+        }
+
+        div {
+            width: 25%;
+        }
+
+        p {
+            margin-right: .5rem;
+        }
+        
+        & ul {
+            display: flex;
+            flex-flow: column;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            list-style-type: none;
+
+            & li {
+                display: flex;
+
+                & a {
+                    padding: .5rem 0;
+                    text-decoration: none;
+                    color: $white;
+
+                    &:hover {
+                        color: $blue_sure;
+                    }
+                }
+            }
+        } 
+    }
+}
+
+
+/* ------------------------------------------------------------------------
+Responsive
+------------------------------------------------------------------------- */
+
+@media screen and (max-width: $resolution-l) {
+    .footer {
+        padding-bottom: 1rem;
+
+        &__links {
+            flex-wrap: wrap;
+    
+            & div {
+                margin-bottom: 1rem;
+                width: 100%;
+                text-align: center;
+            }
+    
+            & p {
+                margin-right: 0;
+            }
+
+            & ul li {
+                justify-content: center;
+            }
+        }
+    }
+}

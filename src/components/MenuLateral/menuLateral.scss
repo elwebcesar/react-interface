@@ -1,0 +1,54 @@
+@import './../../styles/_colors', './../../styles/_resolutions';
+
+.menuLateral {
+
+    & h3 {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    & ul {
+        display: flex;
+        flex-flow: column;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        list-style-type: none;
+
+        & li {
+            display: inline-block;
+            border-bottom: 1px solid $gray_sure;
+
+            a {
+                display: flex;
+                padding: .8rem 1.4rem;
+                color: $gray_dark;
+                text-decoration: none;
+
+                &:before {
+                    content: ' ';
+                    top: 2px;
+                    height: 0px;
+                    margin-right: 10px;
+                    border-left: solid 20px $blue_sure;
+                    border-bottom: solid 6px transparent;
+                    border-top: solid 6px transparent;
+                    position: relative;
+                }
+
+                &:hover, &:focus {
+                    color: $blue_sure;
+                }
+            }
+
+            &:last-child {
+                border: none;
+
+                a {
+                    position: relative;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}

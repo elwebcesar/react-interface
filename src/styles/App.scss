@@ -1,0 +1,18 @@
+@import './_normalize', './fonts/_fonts.scss', './_colors', './_resolutions', './_structure';
+
+body {
+  @include type-body;
+  color: $gray_dark;
+  background-color: $white;
+}
+
+h1, strong {
+  @include font-heavy;
+}
+
+h3, h4 {
+  font: $font_site;
+  font-weight: normal;
+}
+
+@import './_generals';

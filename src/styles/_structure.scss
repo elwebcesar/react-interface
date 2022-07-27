@@ -1,0 +1,19 @@
+/* ------------------------------------------------------------------------
+Type Styles
+------------------------------------------------------------------------- */
+
+$font_browser: "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;
+
+$font_site: "robotomedium", $font_browser;
+$font_site_bold: "robotobold", $font_browser;
+
+
+@mixin type-body {
+	font-family: $font_site;
+	font-size: 1rem;
+	color: $gray_dark;
+}
+
+@mixin font-heavy {
+	font-family: $font_site_bold;
+}
